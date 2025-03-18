@@ -40,7 +40,7 @@ jobs:
     - name: ${{ matrix.os }} package
       uses: actions/upload-artifact@v4
       with:
-        name: RentryArchiver-${{ GITHUB_REF_NAME }}-${{ matrix.os }}
+        name: RentryArchiver-${{ env.GITHUB_REF_NAME }}-${{ matrix.os }}
         path: dist/
         if-no-files-found: error
 
